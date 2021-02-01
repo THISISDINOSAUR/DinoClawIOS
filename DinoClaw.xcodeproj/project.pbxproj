@@ -1,0 +1,778 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B47444625C76BC1003EE7B7 /* ClawArmNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B47444525C76BC1003EE7B7 /* ClawArmNode.swift */; };
+		4B47444B25C76CBE003EE7B7 /* ClawNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B47444A25C76CBE003EE7B7 /* ClawNode.swift */; };
+		4B5EC74D25C761E900257811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC74C25C761E900257811 /* AppDelegate.swift */; };
+		4B5EC74F25C761E900257811 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B5EC74E25C761E900257811 /* art.scnassets */; };
+		4B5EC75125C761E900257811 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC75025C761E900257811 /* GameViewController.swift */; };
+		4B5EC75425C761E900257811 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B5EC75225C761E900257811 /* Main.storyboard */; };
+		4B5EC75625C761EC00257811 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B5EC75525C761EC00257811 /* Assets.xcassets */; };
+		4B5EC76125C761EC00257811 /* DinoClawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC76025C761EC00257811 /* DinoClawTests.swift */; };
+		4B5EC76C25C761EC00257811 /* DinoClawUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC76B25C761EC00257811 /* DinoClawUITests.swift */; };
+		4B5EC7B225C762A500257811 /* WallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC78625C762A400257811 /* WallNode.swift */; };
+		4B5EC7B625C762A500257811 /* analogStick.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5EC78B25C762A400257811 /* analogStick.png */; };
+		4B5EC7B725C762A500257811 /* analogStickInner.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5EC78C25C762A400257811 /* analogStickInner.png */; };
+		4B5EC7B825C762A500257811 /* AnalogStickNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC78D25C762A400257811 /* AnalogStickNode.swift */; };
+		4B5EC7B925C762A500257811 /* GameplayConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC78F25C762A400257811 /* GameplayConfiguration.swift */; };
+		4B5EC7BA25C762A500257811 /* ColourPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC79025C762A400257811 /* ColourPalette.swift */; };
+		4B5EC7BB25C762A500257811 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC79225C762A400257811 /* Random.swift */; };
+		4B5EC7BC25C762A500257811 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC79325C762A400257811 /* UIColor.swift */; };
+		4B5EC7BD25C762A500257811 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC79425C762A400257811 /* URL.swift */; };
+		4B5EC7BE25C762A500257811 /* SCNVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC79525C762A400257811 /* SCNVector.swift */; };
+		4B5EC7BF25C762A500257811 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC79625C762A400257811 /* Numbers.swift */; };
+		4B5EC7C025C762A500257811 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC79825C762A400257811 /* APIRequest.swift */; };
+		4B5EC7C125C762A500257811 /* TinysaurImageUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC79A25C762A400257811 /* TinysaurImageUtilities.swift */; };
+		4B5EC7C225C762A500257811 /* TinysaurService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC79B25C762A400257811 /* TinysaurService.swift */; };
+		4B5EC7C325C762A500257811 /* PhysicsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC79D25C762A400257811 /* PhysicsUtils.swift */; };
+		4B5EC7C425C762A500257811 /* ColliderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC79F25C762A400257811 /* ColliderType.swift */; };
+		4B5EC7C525C762A500257811 /* DelayedActionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC7A125C762A500257811 /* DelayedActionComponent.swift */; };
+		4B5EC7C625C762A500257811 /* DirectionControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC7A225C762A500257811 /* DirectionControlComponent.swift */; };
+		4B5EC7C725C762A500257811 /* LifeSpanComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC7A325C762A500257811 /* LifeSpanComponent.swift */; };
+		4B5EC7C925C762A500257811 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC7A525C762A500257811 /* Component.swift */; };
+		4B5EC7CA25C762A500257811 /* WanderingControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC7A625C762A500257811 /* WanderingControlComponent.swift */; };
+		4B5EC7CB25C762A500257811 /* RateOfFireComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC7A725C762A500257811 /* RateOfFireComponent.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B5EC75D25C761EC00257811 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B5EC74125C761E900257811 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B5EC74825C761E900257811;
+			remoteInfo = DinoClaw;
+		};
+		4B5EC76825C761EC00257811 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B5EC74125C761E900257811 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B5EC74825C761E900257811;
+			remoteInfo = DinoClaw;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4B47444525C76BC1003EE7B7 /* ClawArmNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawArmNode.swift; sourceTree = "<group>"; };
+		4B47444A25C76CBE003EE7B7 /* ClawNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawNode.swift; sourceTree = "<group>"; };
+		4B5EC74925C761E900257811 /* DinoClaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinoClaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5EC74C25C761E900257811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B5EC74E25C761E900257811 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		4B5EC75025C761E900257811 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = ../GameViewController.swift; sourceTree = "<group>"; };
+		4B5EC75325C761E900257811 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4B5EC75525C761EC00257811 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B5EC75725C761EC00257811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B5EC75C25C761EC00257811 /* DinoClawTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DinoClawTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5EC76025C761EC00257811 /* DinoClawTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoClawTests.swift; sourceTree = "<group>"; };
+		4B5EC76225C761EC00257811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B5EC76725C761EC00257811 /* DinoClawUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DinoClawUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5EC76B25C761EC00257811 /* DinoClawUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinoClawUITests.swift; sourceTree = "<group>"; };
+		4B5EC76D25C761ED00257811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B5EC78625C762A400257811 /* WallNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallNode.swift; sourceTree = "<group>"; };
+		4B5EC78B25C762A400257811 /* analogStick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = analogStick.png; sourceTree = "<group>"; };
+		4B5EC78C25C762A400257811 /* analogStickInner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = analogStickInner.png; sourceTree = "<group>"; };
+		4B5EC78D25C762A400257811 /* AnalogStickNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalogStickNode.swift; sourceTree = "<group>"; };
+		4B5EC78F25C762A400257811 /* GameplayConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameplayConfiguration.swift; sourceTree = "<group>"; };
+		4B5EC79025C762A400257811 /* ColourPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourPalette.swift; sourceTree = "<group>"; };
+		4B5EC79225C762A400257811 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		4B5EC79325C762A400257811 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		4B5EC79425C762A400257811 /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		4B5EC79525C762A400257811 /* SCNVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNVector.swift; sourceTree = "<group>"; };
+		4B5EC79625C762A400257811 /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
+		4B5EC79825C762A400257811 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		4B5EC79A25C762A400257811 /* TinysaurImageUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinysaurImageUtilities.swift; sourceTree = "<group>"; };
+		4B5EC79B25C762A400257811 /* TinysaurService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinysaurService.swift; sourceTree = "<group>"; };
+		4B5EC79D25C762A400257811 /* PhysicsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsUtils.swift; sourceTree = "<group>"; };
+		4B5EC79F25C762A400257811 /* ColliderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColliderType.swift; sourceTree = "<group>"; };
+		4B5EC7A125C762A500257811 /* DelayedActionComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayedActionComponent.swift; sourceTree = "<group>"; };
+		4B5EC7A225C762A500257811 /* DirectionControlComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionControlComponent.swift; sourceTree = "<group>"; };
+		4B5EC7A325C762A500257811 /* LifeSpanComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeSpanComponent.swift; sourceTree = "<group>"; };
+		4B5EC7A525C762A500257811 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		4B5EC7A625C762A500257811 /* WanderingControlComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WanderingControlComponent.swift; sourceTree = "<group>"; };
+		4B5EC7A725C762A500257811 /* RateOfFireComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateOfFireComponent.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B5EC74625C761E900257811 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5EC75925C761EC00257811 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5EC76425C761EC00257811 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B5EC74025C761E900257811 = {
+			isa = PBXGroup;
+			children = (
+				4B5EC74B25C761E900257811 /* DinoClaw */,
+				4B5EC75F25C761EC00257811 /* DinoClawTests */,
+				4B5EC76A25C761EC00257811 /* DinoClawUITests */,
+				4B5EC74A25C761E900257811 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B5EC74A25C761E900257811 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC74925C761E900257811 /* DinoClaw.app */,
+				4B5EC75C25C761EC00257811 /* DinoClawTests.xctest */,
+				4B5EC76725C761EC00257811 /* DinoClawUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B5EC74B25C761E900257811 /* DinoClaw */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC74C25C761E900257811 /* AppDelegate.swift */,
+				4B5EC7A825C762A500257811 /* Scenes */,
+				4B5EC74E25C761E900257811 /* art.scnassets */,
+				4B5EC75225C761E900257811 /* Main.storyboard */,
+				4B5EC7A025C762A500257811 /* Components */,
+				4B5EC78E25C762A400257811 /* Configuration */,
+				4B5EC78A25C762A400257811 /* Controls */,
+				4B5EC77F25C762A400257811 /* Entities */,
+				4B5EC79E25C762A400257811 /* GameState */,
+				4B5EC79725C762A400257811 /* Network */,
+				4B5EC79C25C762A400257811 /* Physics */,
+				4B5EC79925C762A400257811 /* ProcGenService */,
+				4B5EC79125C762A400257811 /* Utilities */,
+				4B5EC75525C761EC00257811 /* Assets.xcassets */,
+				4B5EC75725C761EC00257811 /* Info.plist */,
+			);
+			path = DinoClaw;
+			sourceTree = "<group>";
+		};
+		4B5EC75F25C761EC00257811 /* DinoClawTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC76025C761EC00257811 /* DinoClawTests.swift */,
+				4B5EC76225C761EC00257811 /* Info.plist */,
+			);
+			path = DinoClawTests;
+			sourceTree = "<group>";
+		};
+		4B5EC76A25C761EC00257811 /* DinoClawUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC76B25C761EC00257811 /* DinoClawUITests.swift */,
+				4B5EC76D25C761ED00257811 /* Info.plist */,
+			);
+			path = DinoClawUITests;
+			sourceTree = "<group>";
+		};
+		4B5EC77F25C762A400257811 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC78625C762A400257811 /* WallNode.swift */,
+				4B47444A25C76CBE003EE7B7 /* ClawNode.swift */,
+				4B47444525C76BC1003EE7B7 /* ClawArmNode.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		4B5EC78A25C762A400257811 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC78B25C762A400257811 /* analogStick.png */,
+				4B5EC78C25C762A400257811 /* analogStickInner.png */,
+				4B5EC78D25C762A400257811 /* AnalogStickNode.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		4B5EC78E25C762A400257811 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC78F25C762A400257811 /* GameplayConfiguration.swift */,
+				4B5EC79025C762A400257811 /* ColourPalette.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		4B5EC79125C762A400257811 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC79225C762A400257811 /* Random.swift */,
+				4B5EC79325C762A400257811 /* UIColor.swift */,
+				4B5EC79425C762A400257811 /* URL.swift */,
+				4B5EC79525C762A400257811 /* SCNVector.swift */,
+				4B5EC79625C762A400257811 /* Numbers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4B5EC79725C762A400257811 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC79825C762A400257811 /* APIRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4B5EC79925C762A400257811 /* ProcGenService */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC79A25C762A400257811 /* TinysaurImageUtilities.swift */,
+				4B5EC79B25C762A400257811 /* TinysaurService.swift */,
+			);
+			path = ProcGenService;
+			sourceTree = "<group>";
+		};
+		4B5EC79C25C762A400257811 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC79D25C762A400257811 /* PhysicsUtils.swift */,
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
+		4B5EC79E25C762A400257811 /* GameState */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC79F25C762A400257811 /* ColliderType.swift */,
+			);
+			path = GameState;
+			sourceTree = "<group>";
+		};
+		4B5EC7A025C762A500257811 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC7A125C762A500257811 /* DelayedActionComponent.swift */,
+				4B5EC7A225C762A500257811 /* DirectionControlComponent.swift */,
+				4B5EC7A325C762A500257811 /* LifeSpanComponent.swift */,
+				4B5EC7A525C762A500257811 /* Component.swift */,
+				4B5EC7A625C762A500257811 /* WanderingControlComponent.swift */,
+				4B5EC7A725C762A500257811 /* RateOfFireComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4B5EC7A825C762A500257811 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC7A925C762A500257811 /* GameScenes */,
+				4B5EC7AB25C762A500257811 /* Menus */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4B5EC7A925C762A500257811 /* GameScenes */ = {
+			isa = PBXGroup;
+			children = (
+				4B5EC75025C761E900257811 /* GameViewController.swift */,
+			);
+			path = GameScenes;
+			sourceTree = "<group>";
+		};
+		4B5EC7AB25C762A500257811 /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Menus;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B5EC74825C761E900257811 /* DinoClaw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B5EC77025C761ED00257811 /* Build configuration list for PBXNativeTarget "DinoClaw" */;
+			buildPhases = (
+				4B5EC74525C761E900257811 /* Sources */,
+				4B5EC74625C761E900257811 /* Frameworks */,
+				4B5EC74725C761E900257811 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DinoClaw;
+			productName = DinoClaw;
+			productReference = 4B5EC74925C761E900257811 /* DinoClaw.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B5EC75B25C761EC00257811 /* DinoClawTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B5EC77325C761ED00257811 /* Build configuration list for PBXNativeTarget "DinoClawTests" */;
+			buildPhases = (
+				4B5EC75825C761EC00257811 /* Sources */,
+				4B5EC75925C761EC00257811 /* Frameworks */,
+				4B5EC75A25C761EC00257811 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B5EC75E25C761EC00257811 /* PBXTargetDependency */,
+			);
+			name = DinoClawTests;
+			productName = DinoClawTests;
+			productReference = 4B5EC75C25C761EC00257811 /* DinoClawTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4B5EC76625C761EC00257811 /* DinoClawUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B5EC77625C761ED00257811 /* Build configuration list for PBXNativeTarget "DinoClawUITests" */;
+			buildPhases = (
+				4B5EC76325C761EC00257811 /* Sources */,
+				4B5EC76425C761EC00257811 /* Frameworks */,
+				4B5EC76525C761EC00257811 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B5EC76925C761EC00257811 /* PBXTargetDependency */,
+			);
+			name = DinoClawUITests;
+			productName = DinoClawUITests;
+			productReference = 4B5EC76725C761EC00257811 /* DinoClawUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B5EC74125C761E900257811 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					4B5EC74825C761E900257811 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					4B5EC75B25C761EC00257811 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 4B5EC74825C761E900257811;
+					};
+					4B5EC76625C761EC00257811 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 4B5EC74825C761E900257811;
+					};
+				};
+			};
+			buildConfigurationList = 4B5EC74425C761E900257811 /* Build configuration list for PBXProject "DinoClaw" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B5EC74025C761E900257811;
+			productRefGroup = 4B5EC74A25C761E900257811 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B5EC74825C761E900257811 /* DinoClaw */,
+				4B5EC75B25C761EC00257811 /* DinoClawTests */,
+				4B5EC76625C761EC00257811 /* DinoClawUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B5EC74725C761E900257811 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5EC74F25C761E900257811 /* art.scnassets in Resources */,
+				4B5EC75625C761EC00257811 /* Assets.xcassets in Resources */,
+				4B5EC7B725C762A500257811 /* analogStickInner.png in Resources */,
+				4B5EC7B625C762A500257811 /* analogStick.png in Resources */,
+				4B5EC75425C761E900257811 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5EC75A25C761EC00257811 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5EC76525C761EC00257811 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B5EC74525C761E900257811 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5EC7C025C762A500257811 /* APIRequest.swift in Sources */,
+				4B5EC7BE25C762A500257811 /* SCNVector.swift in Sources */,
+				4B5EC7C225C762A500257811 /* TinysaurService.swift in Sources */,
+				4B5EC7B225C762A500257811 /* WallNode.swift in Sources */,
+				4B5EC7B825C762A500257811 /* AnalogStickNode.swift in Sources */,
+				4B5EC7BC25C762A500257811 /* UIColor.swift in Sources */,
+				4B47444625C76BC1003EE7B7 /* ClawArmNode.swift in Sources */,
+				4B5EC7BA25C762A500257811 /* ColourPalette.swift in Sources */,
+				4B5EC7C425C762A500257811 /* ColliderType.swift in Sources */,
+				4B5EC75125C761E900257811 /* GameViewController.swift in Sources */,
+				4B5EC7CB25C762A500257811 /* RateOfFireComponent.swift in Sources */,
+				4B5EC7BB25C762A500257811 /* Random.swift in Sources */,
+				4B5EC7C725C762A500257811 /* LifeSpanComponent.swift in Sources */,
+				4B5EC7BF25C762A500257811 /* Numbers.swift in Sources */,
+				4B5EC7BD25C762A500257811 /* URL.swift in Sources */,
+				4B5EC7C925C762A500257811 /* Component.swift in Sources */,
+				4B5EC7CA25C762A500257811 /* WanderingControlComponent.swift in Sources */,
+				4B5EC7C525C762A500257811 /* DelayedActionComponent.swift in Sources */,
+				4B5EC7C625C762A500257811 /* DirectionControlComponent.swift in Sources */,
+				4B5EC7C325C762A500257811 /* PhysicsUtils.swift in Sources */,
+				4B5EC7B925C762A500257811 /* GameplayConfiguration.swift in Sources */,
+				4B5EC74D25C761E900257811 /* AppDelegate.swift in Sources */,
+				4B47444B25C76CBE003EE7B7 /* ClawNode.swift in Sources */,
+				4B5EC7C125C762A500257811 /* TinysaurImageUtilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5EC75825C761EC00257811 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5EC76125C761EC00257811 /* DinoClawTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B5EC76325C761EC00257811 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B5EC76C25C761EC00257811 /* DinoClawUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B5EC75E25C761EC00257811 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B5EC74825C761E900257811 /* DinoClaw */;
+			targetProxy = 4B5EC75D25C761EC00257811 /* PBXContainerItemProxy */;
+		};
+		4B5EC76925C761EC00257811 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B5EC74825C761E900257811 /* DinoClaw */;
+			targetProxy = 4B5EC76825C761EC00257811 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B5EC75225C761E900257811 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B5EC75325C761E900257811 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B5EC76E25C761ED00257811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4B5EC76F25C761ED00257811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B5EC77125C761ED00257811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W2G6SZXA65;
+				INFOPLIST_FILE = DinoClaw/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thecreativeperiod.DinoClaw;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4B5EC77225C761ED00257811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W2G6SZXA65;
+				INFOPLIST_FILE = DinoClaw/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thecreativeperiod.DinoClaw;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4B5EC77425C761ED00257811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W2G6SZXA65;
+				INFOPLIST_FILE = DinoClawTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thecreativeperiod.DinoClawTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DinoClaw.app/DinoClaw";
+			};
+			name = Debug;
+		};
+		4B5EC77525C761ED00257811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W2G6SZXA65;
+				INFOPLIST_FILE = DinoClawTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thecreativeperiod.DinoClawTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DinoClaw.app/DinoClaw";
+			};
+			name = Release;
+		};
+		4B5EC77725C761ED00257811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W2G6SZXA65;
+				INFOPLIST_FILE = DinoClawUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thecreativeperiod.DinoClawUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DinoClaw;
+			};
+			name = Debug;
+		};
+		4B5EC77825C761ED00257811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W2G6SZXA65;
+				INFOPLIST_FILE = DinoClawUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thecreativeperiod.DinoClawUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DinoClaw;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B5EC74425C761E900257811 /* Build configuration list for PBXProject "DinoClaw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B5EC76E25C761ED00257811 /* Debug */,
+				4B5EC76F25C761ED00257811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B5EC77025C761ED00257811 /* Build configuration list for PBXNativeTarget "DinoClaw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B5EC77125C761ED00257811 /* Debug */,
+				4B5EC77225C761ED00257811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B5EC77325C761ED00257811 /* Build configuration list for PBXNativeTarget "DinoClawTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B5EC77425C761ED00257811 /* Debug */,
+				4B5EC77525C761ED00257811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B5EC77625C761ED00257811 /* Build configuration list for PBXNativeTarget "DinoClawUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B5EC77725C761ED00257811 /* Debug */,
+				4B5EC77825C761ED00257811 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B5EC74125C761E900257811 /* Project object */;
+}
