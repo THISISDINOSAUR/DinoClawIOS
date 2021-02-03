@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		4B26A54A25CA1A50007CB2E3 /* ClawTraversalAssemblyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A54925CA1A50007CB2E3 /* ClawTraversalAssemblyNode.swift */; };
 		4B26A55225CA20C5007CB2E3 /* ClawMachineCabinetNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A55125CA20C5007CB2E3 /* ClawMachineCabinetNode.swift */; };
+		4B26A55A25CA239A007CB2E3 /* ClawAssemblyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A55925CA239A007CB2E3 /* ClawAssemblyNode.swift */; };
+		4B26A56225CB5256007CB2E3 /* TODO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A56125CB5256007CB2E3 /* TODO.swift */; };
+		4B26A57A25CB614C007CB2E3 /* ClawMachineReadyToStartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A57925CB614C007CB2E3 /* ClawMachineReadyToStartState.swift */; };
+		4B26A58625CB6179007CB2E3 /* ClawMachineLoweringClawState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A57E25CB6179007CB2E3 /* ClawMachineLoweringClawState.swift */; };
+		4B26A58725CB6179007CB2E3 /* ClawMachineMovingRightState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A57F25CB6179007CB2E3 /* ClawMachineMovingRightState.swift */; };
+		4B26A58825CB6179007CB2E3 /* ClawMachineOpeningClawState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A58025CB6179007CB2E3 /* ClawMachineOpeningClawState.swift */; };
+		4B26A58925CB6179007CB2E3 /* ClawMachineRaisingClawState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A58125CB6179007CB2E3 /* ClawMachineRaisingClawState.swift */; };
+		4B26A58A25CB6179007CB2E3 /* ClawMachineAwaitingRightInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A58225CB6179007CB2E3 /* ClawMachineAwaitingRightInputState.swift */; };
+		4B26A58B25CB6179007CB2E3 /* ClawMachineAwaitingForwardInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A58325CB6179007CB2E3 /* ClawMachineAwaitingForwardInputState.swift */; };
+		4B26A58C25CB6179007CB2E3 /* ClawMachineMovingForwardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A58425CB6179007CB2E3 /* ClawMachineMovingForwardState.swift */; };
+		4B26A58D25CB6179007CB2E3 /* ClawMachineReturningToStartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A58525CB6179007CB2E3 /* ClawMachineReturningToStartState.swift */; };
 		4B47444625C76BC1003EE7B7 /* ClawArmNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B47444525C76BC1003EE7B7 /* ClawArmNode.swift */; };
 		4B47444B25C76CBE003EE7B7 /* ClawNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B47444A25C76CBE003EE7B7 /* ClawNode.swift */; };
 		4B5EC74D25C761E900257811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC74C25C761E900257811 /* AppDelegate.swift */; };
@@ -62,6 +73,17 @@
 /* Begin PBXFileReference section */
 		4B26A54925CA1A50007CB2E3 /* ClawTraversalAssemblyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawTraversalAssemblyNode.swift; sourceTree = "<group>"; };
 		4B26A55125CA20C5007CB2E3 /* ClawMachineCabinetNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawMachineCabinetNode.swift; sourceTree = "<group>"; };
+		4B26A55925CA239A007CB2E3 /* ClawAssemblyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawAssemblyNode.swift; sourceTree = "<group>"; };
+		4B26A56125CB5256007CB2E3 /* TODO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODO.swift; sourceTree = "<group>"; };
+		4B26A57925CB614C007CB2E3 /* ClawMachineReadyToStartState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClawMachineReadyToStartState.swift; sourceTree = "<group>"; };
+		4B26A57E25CB6179007CB2E3 /* ClawMachineLoweringClawState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClawMachineLoweringClawState.swift; sourceTree = "<group>"; };
+		4B26A57F25CB6179007CB2E3 /* ClawMachineMovingRightState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClawMachineMovingRightState.swift; sourceTree = "<group>"; };
+		4B26A58025CB6179007CB2E3 /* ClawMachineOpeningClawState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClawMachineOpeningClawState.swift; sourceTree = "<group>"; };
+		4B26A58125CB6179007CB2E3 /* ClawMachineRaisingClawState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClawMachineRaisingClawState.swift; sourceTree = "<group>"; };
+		4B26A58225CB6179007CB2E3 /* ClawMachineAwaitingRightInputState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClawMachineAwaitingRightInputState.swift; sourceTree = "<group>"; };
+		4B26A58325CB6179007CB2E3 /* ClawMachineAwaitingForwardInputState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClawMachineAwaitingForwardInputState.swift; sourceTree = "<group>"; };
+		4B26A58425CB6179007CB2E3 /* ClawMachineMovingForwardState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClawMachineMovingForwardState.swift; sourceTree = "<group>"; };
+		4B26A58525CB6179007CB2E3 /* ClawMachineReturningToStartState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClawMachineReturningToStartState.swift; sourceTree = "<group>"; };
 		4B47444525C76BC1003EE7B7 /* ClawArmNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawArmNode.swift; sourceTree = "<group>"; };
 		4B47444A25C76CBE003EE7B7 /* ClawNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawNode.swift; sourceTree = "<group>"; };
 		4B5EC74925C761E900257811 /* DinoClaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinoClaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +148,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B26A57825CB614C007CB2E3 /* ClawMachineCabinetStates */ = {
+			isa = PBXGroup;
+			children = (
+				4B26A57925CB614C007CB2E3 /* ClawMachineReadyToStartState.swift */,
+				4B26A58325CB6179007CB2E3 /* ClawMachineAwaitingForwardInputState.swift */,
+				4B26A58425CB6179007CB2E3 /* ClawMachineMovingForwardState.swift */,
+				4B26A58225CB6179007CB2E3 /* ClawMachineAwaitingRightInputState.swift */,
+				4B26A57F25CB6179007CB2E3 /* ClawMachineMovingRightState.swift */,
+				4B26A57E25CB6179007CB2E3 /* ClawMachineLoweringClawState.swift */,
+				4B26A58125CB6179007CB2E3 /* ClawMachineRaisingClawState.swift */,
+				4B26A58525CB6179007CB2E3 /* ClawMachineReturningToStartState.swift */,
+				4B26A58025CB6179007CB2E3 /* ClawMachineOpeningClawState.swift */,
+			);
+			path = ClawMachineCabinetStates;
+			sourceTree = "<group>";
+		};
 		4B5EC74025C761E900257811 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +187,7 @@
 		4B5EC74B25C761E900257811 /* DinoClaw */ = {
 			isa = PBXGroup;
 			children = (
+				4B26A56125CB5256007CB2E3 /* TODO.swift */,
 				4B5EC74C25C761E900257811 /* AppDelegate.swift */,
 				4B5EC7A825C762A500257811 /* Scenes */,
 				4B5EC74E25C761E900257811 /* art.scnassets */,
@@ -189,9 +228,11 @@
 		4B5EC77F25C762A400257811 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				4B26A57825CB614C007CB2E3 /* ClawMachineCabinetStates */,
 				4B26A55125CA20C5007CB2E3 /* ClawMachineCabinetNode.swift */,
 				4B5EC78625C762A400257811 /* WallNode.swift */,
 				4B26A54925CA1A50007CB2E3 /* ClawTraversalAssemblyNode.swift */,
+				4B26A55925CA239A007CB2E3 /* ClawAssemblyNode.swift */,
 				4B47444A25C76CBE003EE7B7 /* ClawNode.swift */,
 				4B47444525C76BC1003EE7B7 /* ClawArmNode.swift */,
 			);
@@ -431,32 +472,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B26A58825CB6179007CB2E3 /* ClawMachineOpeningClawState.swift in Sources */,
 				4B5EC7C025C762A500257811 /* APIRequest.swift in Sources */,
 				4B5EC7BE25C762A500257811 /* SCNVector.swift in Sources */,
 				4B5EC7C225C762A500257811 /* TinysaurService.swift in Sources */,
 				4B5EC7B225C762A500257811 /* WallNode.swift in Sources */,
+				4B26A58D25CB6179007CB2E3 /* ClawMachineReturningToStartState.swift in Sources */,
 				4B5EC7B825C762A500257811 /* AnalogStickNode.swift in Sources */,
 				4B5EC7BC25C762A500257811 /* UIColor.swift in Sources */,
 				4B47444625C76BC1003EE7B7 /* ClawArmNode.swift in Sources */,
+				4B26A58A25CB6179007CB2E3 /* ClawMachineAwaitingRightInputState.swift in Sources */,
 				4B5EC7BA25C762A500257811 /* ColourPalette.swift in Sources */,
+				4B26A58B25CB6179007CB2E3 /* ClawMachineAwaitingForwardInputState.swift in Sources */,
 				4B5EC7C425C762A500257811 /* ColliderType.swift in Sources */,
 				4B5EC75125C761E900257811 /* GameViewController.swift in Sources */,
 				4B5EC7CB25C762A500257811 /* RateOfFireComponent.swift in Sources */,
 				4B5EC7BB25C762A500257811 /* Random.swift in Sources */,
 				4B26A54A25CA1A50007CB2E3 /* ClawTraversalAssemblyNode.swift in Sources */,
 				4B5EC7C725C762A500257811 /* LifeSpanComponent.swift in Sources */,
+				4B26A58C25CB6179007CB2E3 /* ClawMachineMovingForwardState.swift in Sources */,
 				4B5EC7BF25C762A500257811 /* Numbers.swift in Sources */,
 				4B5EC7BD25C762A500257811 /* URL.swift in Sources */,
 				4B5EC7C925C762A500257811 /* Component.swift in Sources */,
 				4B5EC7CA25C762A500257811 /* WanderingControlComponent.swift in Sources */,
 				4B5EC7C525C762A500257811 /* DelayedActionComponent.swift in Sources */,
 				4B5EC7C625C762A500257811 /* DirectionControlComponent.swift in Sources */,
+				4B26A58625CB6179007CB2E3 /* ClawMachineLoweringClawState.swift in Sources */,
 				4B5EC7C325C762A500257811 /* PhysicsUtils.swift in Sources */,
 				4B26A55225CA20C5007CB2E3 /* ClawMachineCabinetNode.swift in Sources */,
 				4B5EC7B925C762A500257811 /* GameplayConfiguration.swift in Sources */,
+				4B26A57A25CB614C007CB2E3 /* ClawMachineReadyToStartState.swift in Sources */,
+				4B26A56225CB5256007CB2E3 /* TODO.swift in Sources */,
 				4B5EC74D25C761E900257811 /* AppDelegate.swift in Sources */,
 				4B47444B25C76CBE003EE7B7 /* ClawNode.swift in Sources */,
+				4B26A58925CB6179007CB2E3 /* ClawMachineRaisingClawState.swift in Sources */,
 				4B5EC7C125C762A500257811 /* TinysaurImageUtilities.swift in Sources */,
+				4B26A58725CB6179007CB2E3 /* ClawMachineMovingRightState.swift in Sources */,
+				4B26A55A25CA239A007CB2E3 /* ClawAssemblyNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

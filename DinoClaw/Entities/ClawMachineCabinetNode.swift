@@ -1,8 +1,38 @@
 //Roar
 
 import SceneKit
+import GameplayKit
+
+//enum ClawMachineCabinetState {
+//    case readyTostart
+//    case awaitingForwardInput
+//    case movingForward
+//    case awaitingRightInput
+//    case movingRight
+//    case loweringClaw
+//    case raisingClaw
+//    case returningToStart
+//    case openingClaw
+//}
 
 class ClawMachineCabinetNode: EntityNode {
+    
+    var stateMachine: GKStateMachine = {
+        let states = [
+            ClawMachineReadyToStartState(),
+            ClawMachineAwaitingForwardInputState(),
+            ClawMachineMovingForwardState(),
+            ClawMachineAwaitingRightInputState(),
+            ClawMachineMovingRightState(),
+            ClawMachineLoweringClawState(),
+            ClawMachineRaisingClawState(),
+            ClawMachineReturningToStartState(),
+            ClawMachineOpeningClawState()
+        ]
+        let stateMachine = GKStateMachine(states: states)
+        stateMachine.enter(ClawMachineReadyToStartState.self)
+        return GKStateMachine(states: states)
+    }()
     
     lazy var floorNode: EntityNode = {
         let box = SCNBox(width: 10, height: 0.5, length: 10, chamferRadius: 0)
@@ -42,7 +72,6 @@ class ClawMachineCabinetNode: EntityNode {
         clawAssembly.setClawPosition(x: -3.5, z: 3.5)
         return clawAssembly
     }()
-    
     
     override init() {
         super.init()

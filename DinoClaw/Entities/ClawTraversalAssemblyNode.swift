@@ -4,7 +4,7 @@ import SceneKit
 
 class ClawTraversalAssemblyNode: EntityNode {
     
-    lazy var clawNode = ClawNode()
+    lazy var clawAssemblyNode = ClawAssemblyNode()
     lazy var leftRightRailNode: EntityNode = {
         let length: CGFloat = 10.0
         let box = SCNBox(width: 0.2, height: 0.2, length: 10.0, chamferRadius: 0)
@@ -39,7 +39,7 @@ class ClawTraversalAssemblyNode: EntityNode {
     override init() {
         super.init()
         
-        addChildNode(clawNode)
+        addChildNode(clawAssemblyNode)
         addChildNode(leftRightRailNode)
         addChildNode(forwardBackwardRailNode)
     }
@@ -49,7 +49,7 @@ class ClawTraversalAssemblyNode: EntityNode {
     }
     
     func setClawPosition(x: Float, z: Float) {
-        clawNode.position = SCNVector3(x, clawNode.position.y, z)
+        clawAssemblyNode.position = SCNVector3(x, clawAssemblyNode.position.y, z)
         leftRightRailNode.position = SCNVector3(x, leftRightRailNode.position.y, leftRightRailNode.position.z)
         forwardBackwardRailNode.position = SCNVector3(forwardBackwardRailNode.position.x, forwardBackwardRailNode.position.y, z)
     }

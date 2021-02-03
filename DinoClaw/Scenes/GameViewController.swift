@@ -83,8 +83,6 @@ class GameViewController: UIViewController {
         let cabinetNode = ClawMachineCabinetNode()
         scene.rootNode.addChildNode(cabinetNode)
         
-        
-        
         for _ in 0..<50 {
             let ball = SCNSphere(radius: 1.0)
             let node = SCNNode(geometry: ball)
@@ -103,23 +101,33 @@ class GameViewController: UIViewController {
     
     func setUpButtons() {
         let size = view.frame.size
-        let color = UIColor(hueDegrees: 350, saturation: 0.4, brightness: 1.0, alpha: 1.0)
+        let color = UIColor(hueDegrees: 334, saturation: 0.43, brightness: 1.0, alpha: 1.0)
+        
+        let startButton = UIButton()
+        startButton.frame = CGRect(x: size.width - 250, y: size.height - 75, width: 50, height: 50)
+        startButton.backgroundColor = color
+        startButton.layer.cornerRadius = 25
+        scnView.addSubview(startButton)
+        startButton.addTarget(self, action: #selector(self.startButtonPressed), for: UIControl.Event.touchDown)
         
         let forwardButton = UIButton()
-        forwardButton.frame = CGRect(x: size.width - 100, y: size.height - 100, width: 50, height: 50)
+        forwardButton.frame = CGRect(x: size.width - 150, y: size.height - 75, width: 50, height: 50)
         forwardButton.backgroundColor = color
         forwardButton.layer.cornerRadius = 25
-        forwardButton.alpha = 0.5
         scnView.addSubview(forwardButton)
         forwardButton.addTarget(self, action: #selector(self.forwardButtonPressed), for: UIControl.Event.touchDown)
         
         let rightButton = UIButton()
-        rightButton.frame = CGRect(x: forwardButton.frame.minX - 75, y: size.height - 100, width: 50, height: 50)
+        rightButton.frame = CGRect(x: forwardButton.frame.maxX + 50, y: size.height - 75, width: 50, height: 50)
         rightButton.backgroundColor = color
         rightButton.layer.cornerRadius = 25
-        rightButton.alpha = 0.5
         scnView.addSubview(rightButton)
         rightButton.addTarget(self, action: #selector(self.rightButtonPressed), for: UIControl.Event.touchDown)
+    }
+    
+    @objc
+    func startButtonPressed() {
+        
     }
     
     @objc
