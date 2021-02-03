@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B26A54A25CA1A50007CB2E3 /* ClawTraversalAssemblyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A54925CA1A50007CB2E3 /* ClawTraversalAssemblyNode.swift */; };
+		4B26A55225CA20C5007CB2E3 /* ClawMachineCabinetNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A55125CA20C5007CB2E3 /* ClawMachineCabinetNode.swift */; };
 		4B47444625C76BC1003EE7B7 /* ClawArmNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B47444525C76BC1003EE7B7 /* ClawArmNode.swift */; };
 		4B47444B25C76CBE003EE7B7 /* ClawNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B47444A25C76CBE003EE7B7 /* ClawNode.swift */; };
 		4B5EC74D25C761E900257811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC74C25C761E900257811 /* AppDelegate.swift */; };
@@ -58,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B26A54925CA1A50007CB2E3 /* ClawTraversalAssemblyNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawTraversalAssemblyNode.swift; sourceTree = "<group>"; };
+		4B26A55125CA20C5007CB2E3 /* ClawMachineCabinetNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawMachineCabinetNode.swift; sourceTree = "<group>"; };
 		4B47444525C76BC1003EE7B7 /* ClawArmNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawArmNode.swift; sourceTree = "<group>"; };
 		4B47444A25C76CBE003EE7B7 /* ClawNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawNode.swift; sourceTree = "<group>"; };
 		4B5EC74925C761E900257811 /* DinoClaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinoClaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,7 +189,9 @@
 		4B5EC77F25C762A400257811 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				4B26A55125CA20C5007CB2E3 /* ClawMachineCabinetNode.swift */,
 				4B5EC78625C762A400257811 /* WallNode.swift */,
+				4B26A54925CA1A50007CB2E3 /* ClawTraversalAssemblyNode.swift */,
 				4B47444A25C76CBE003EE7B7 /* ClawNode.swift */,
 				4B47444525C76BC1003EE7B7 /* ClawArmNode.swift */,
 			);
@@ -437,6 +443,7 @@
 				4B5EC75125C761E900257811 /* GameViewController.swift in Sources */,
 				4B5EC7CB25C762A500257811 /* RateOfFireComponent.swift in Sources */,
 				4B5EC7BB25C762A500257811 /* Random.swift in Sources */,
+				4B26A54A25CA1A50007CB2E3 /* ClawTraversalAssemblyNode.swift in Sources */,
 				4B5EC7C725C762A500257811 /* LifeSpanComponent.swift in Sources */,
 				4B5EC7BF25C762A500257811 /* Numbers.swift in Sources */,
 				4B5EC7BD25C762A500257811 /* URL.swift in Sources */,
@@ -445,6 +452,7 @@
 				4B5EC7C525C762A500257811 /* DelayedActionComponent.swift in Sources */,
 				4B5EC7C625C762A500257811 /* DirectionControlComponent.swift in Sources */,
 				4B5EC7C325C762A500257811 /* PhysicsUtils.swift in Sources */,
+				4B26A55225CA20C5007CB2E3 /* ClawMachineCabinetNode.swift in Sources */,
 				4B5EC7B925C762A500257811 /* GameplayConfiguration.swift in Sources */,
 				4B5EC74D25C761E900257811 /* AppDelegate.swift in Sources */,
 				4B47444B25C76CBE003EE7B7 /* ClawNode.swift in Sources */,

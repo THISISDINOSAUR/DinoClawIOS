@@ -80,47 +80,15 @@ class GameViewController: UIViewController {
         
         scnView.delegate = self
         
+        let cabinetNode = ClawMachineCabinetNode()
+        scene.rootNode.addChildNode(cabinetNode)
         
         
-        let box = SCNBox(width: 10, height: 0.5, length: 10, chamferRadius: 0)
-        let node = SCNNode(geometry: box)
-        box.firstMaterial?.specular.contents = UIColor.white
-        box.firstMaterial?.diffuse.contents = UIColor(hueDegrees: 47, saturation: 0, brightness: 1.0, alpha: 1.0)
-        
-        let boxShape = SCNPhysicsShape(geometry: box, options: nil)
-        let boxBody = SCNPhysicsBody(type: .static, shape: boxShape)
-        node.physicsBody = boxBody
-        
-        scene.rootNode.addChildNode(node)
-        
-        let wallHeight = 10.0
-        let wallThickness = 0.2
-        let wall = WallNode()
-        wall.eulerAngles.y = Float(90.degreesToRadians)
-        scene.rootNode.addChildNode(wall)
-        wall.position = SCNVector3(-5 + wallThickness / 2.0, wallHeight / 2.0, 0)
-        
-        let wall2 = WallNode()
-        wall2.eulerAngles.y = Float(90.degreesToRadians)
-        scene.rootNode.addChildNode(wall2)
-        wall2.position = SCNVector3(5 - wallThickness / 2.0, wallHeight / 2.0, 0)
-        
-        let wall3 = WallNode()
-        scene.rootNode.addChildNode(wall3)
-        wall3.position = SCNVector3(0, wallHeight / 2.0, -5 + wallThickness / 2.0)
-        
-        let wall4 = WallNode()
-        scene.rootNode.addChildNode(wall4)
-        wall4.position = SCNVector3(0, wallHeight / 2.0, 5 - wallThickness / 2.0)
-        
-        let claw = ClawNode()
-        claw.position = SCNVector3(0, 10, 0)
-        scene.rootNode.addChildNode(claw)
         
         for _ in 0..<50 {
             let ball = SCNSphere(radius: 1.0)
             let node = SCNNode(geometry: ball)
-            box.firstMaterial?.diffuse.contents = UIColor(hueDegrees: CGFloat(Float.random(in: 0..<360)), saturation: 1.0, brightness: 1.0, alpha: 1.0)
+            ball.firstMaterial?.diffuse.contents = UIColor(hueDegrees: CGFloat(Float.random(in: 0..<360)), saturation: 1.0, brightness: 1.0, alpha: 1.0)
             
             let boxShape = SCNPhysicsShape(geometry: ball, options: nil)
             let boxBody = SCNPhysicsBody(type: .dynamic, shape: boxShape)
@@ -129,6 +97,38 @@ class GameViewController: UIViewController {
             
             scene.rootNode.addChildNode(node)
         }
+        
+        setUpButtons()
+    }
+    
+    func setUpButtons() {
+        let size = view.frame.size
+        let color = UIColor(hueDegrees: 350, saturation: 0.4, brightness: 1.0, alpha: 1.0)
+        
+        let forwardButton = UIButton()
+        forwardButton.frame = CGRect(x: size.width - 100, y: size.height - 100, width: 50, height: 50)
+        forwardButton.backgroundColor = color
+        forwardButton.layer.cornerRadius = 25
+        forwardButton.alpha = 0.5
+        scnView.addSubview(forwardButton)
+        forwardButton.addTarget(self, action: #selector(self.forwardButtonPressed), for: UIControl.Event.touchDown)
+        
+        let rightButton = UIButton()
+        rightButton.frame = CGRect(x: forwardButton.frame.minX - 75, y: size.height - 100, width: 50, height: 50)
+        rightButton.backgroundColor = color
+        rightButton.layer.cornerRadius = 25
+        rightButton.alpha = 0.5
+        scnView.addSubview(rightButton)
+        rightButton.addTarget(self, action: #selector(self.rightButtonPressed), for: UIControl.Event.touchDown)
+    }
+    
+    @objc
+    func forwardButtonPressed() {
+        //TODO this is gonna need to be a hold down situation
+    }
+    
+    @objc
+    func rightButtonPressed() {
     }
     
     override var shouldAutorotate: Bool {
