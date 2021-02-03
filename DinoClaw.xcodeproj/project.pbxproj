@@ -20,6 +20,7 @@
 		4B26A58B25CB6179007CB2E3 /* ClawMachineAwaitingForwardInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A58325CB6179007CB2E3 /* ClawMachineAwaitingForwardInputState.swift */; };
 		4B26A58C25CB6179007CB2E3 /* ClawMachineMovingForwardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A58425CB6179007CB2E3 /* ClawMachineMovingForwardState.swift */; };
 		4B26A58D25CB6179007CB2E3 /* ClawMachineReturningToStartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B26A58525CB6179007CB2E3 /* ClawMachineReturningToStartState.swift */; };
+		4B34592A25CB6E72003394C8 /* ClawMachineState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34592925CB6E72003394C8 /* ClawMachineState.swift */; };
 		4B47444625C76BC1003EE7B7 /* ClawArmNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B47444525C76BC1003EE7B7 /* ClawArmNode.swift */; };
 		4B47444B25C76CBE003EE7B7 /* ClawNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B47444A25C76CBE003EE7B7 /* ClawNode.swift */; };
 		4B5EC74D25C761E900257811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5EC74C25C761E900257811 /* AppDelegate.swift */; };
@@ -84,6 +85,7 @@
 		4B26A58325CB6179007CB2E3 /* ClawMachineAwaitingForwardInputState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClawMachineAwaitingForwardInputState.swift; sourceTree = "<group>"; };
 		4B26A58425CB6179007CB2E3 /* ClawMachineMovingForwardState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClawMachineMovingForwardState.swift; sourceTree = "<group>"; };
 		4B26A58525CB6179007CB2E3 /* ClawMachineReturningToStartState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClawMachineReturningToStartState.swift; sourceTree = "<group>"; };
+		4B34592925CB6E72003394C8 /* ClawMachineState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawMachineState.swift; sourceTree = "<group>"; };
 		4B47444525C76BC1003EE7B7 /* ClawArmNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawArmNode.swift; sourceTree = "<group>"; };
 		4B47444A25C76CBE003EE7B7 /* ClawNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClawNode.swift; sourceTree = "<group>"; };
 		4B5EC74925C761E900257811 /* DinoClaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinoClaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,7 @@
 		4B26A57825CB614C007CB2E3 /* ClawMachineCabinetStates */ = {
 			isa = PBXGroup;
 			children = (
+				4B34592925CB6E72003394C8 /* ClawMachineState.swift */,
 				4B26A57925CB614C007CB2E3 /* ClawMachineReadyToStartState.swift */,
 				4B26A58325CB6179007CB2E3 /* ClawMachineAwaitingForwardInputState.swift */,
 				4B26A58425CB6179007CB2E3 /* ClawMachineMovingForwardState.swift */,
@@ -494,6 +497,7 @@
 				4B5EC7BF25C762A500257811 /* Numbers.swift in Sources */,
 				4B5EC7BD25C762A500257811 /* URL.swift in Sources */,
 				4B5EC7C925C762A500257811 /* Component.swift in Sources */,
+				4B34592A25CB6E72003394C8 /* ClawMachineState.swift in Sources */,
 				4B5EC7CA25C762A500257811 /* WanderingControlComponent.swift in Sources */,
 				4B5EC7C525C762A500257811 /* DelayedActionComponent.swift in Sources */,
 				4B5EC7C625C762A500257811 /* DirectionControlComponent.swift in Sources */,

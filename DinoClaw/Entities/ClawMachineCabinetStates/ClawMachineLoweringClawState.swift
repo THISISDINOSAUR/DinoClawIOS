@@ -1,7 +1,7 @@
 import SceneKit
 import GameplayKit
 
-class ClawMachineLoweringClawState: GKState {
+class ClawMachineLoweringClawState: ClawMachineState {
     
     override func didEnter(from previousState: GKState?) {
         super.didEnter(from: previousState)

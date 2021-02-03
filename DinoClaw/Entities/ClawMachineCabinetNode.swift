@@ -17,21 +17,21 @@ import GameplayKit
 
 class ClawMachineCabinetNode: EntityNode {
     
-    var stateMachine: GKStateMachine = {
+    lazy var stateMachine: GKStateMachine = {
         let states = [
-            ClawMachineReadyToStartState(),
-            ClawMachineAwaitingForwardInputState(),
-            ClawMachineMovingForwardState(),
-            ClawMachineAwaitingRightInputState(),
-            ClawMachineMovingRightState(),
-            ClawMachineLoweringClawState(),
-            ClawMachineRaisingClawState(),
-            ClawMachineReturningToStartState(),
-            ClawMachineOpeningClawState()
+            ClawMachineReadyToStartState(clawMachineNode: self),
+            ClawMachineAwaitingForwardInputState(clawMachineNode: self),
+            ClawMachineMovingForwardState(clawMachineNode: self),
+            ClawMachineAwaitingRightInputState(clawMachineNode: self),
+            ClawMachineMovingRightState(clawMachineNode: self),
+            ClawMachineLoweringClawState(clawMachineNode: self),
+            ClawMachineRaisingClawState(clawMachineNode: self),
+            ClawMachineReturningToStartState(clawMachineNode: self),
+            ClawMachineOpeningClawState(clawMachineNode: self)
         ]
         let stateMachine = GKStateMachine(states: states)
         stateMachine.enter(ClawMachineReadyToStartState.self)
-        return GKStateMachine(states: states)
+        return stateMachine
     }()
     
     lazy var floorNode: EntityNode = {
@@ -85,5 +85,25 @@ class ClawMachineCabinetNode: EntityNode {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func startButtonPressed() {
+        stateMachine.enter(ClawMachineAwaitingForwardInputState.self)
+    }
+    
+    func forawrdButtonPressed() {
+        stateMachine.enter(ClawMachineMovingForwardState.self)
+    }
+    
+    func forwardButtonUnpressed(){
+        stateMachine.enter(ClawMachineAwaitingRightInputState.self)
+    }
+    
+    func rightButtonPressed() {
+        stateMachine.enter(ClawMachineMovingRightState.self)
+    }
+    
+    func rightButtonUnpressed(){
+        stateMachine.enter(ClawMachineLoweringClawState.self)
     }
 }

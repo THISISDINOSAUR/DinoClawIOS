@@ -19,6 +19,8 @@ class GameViewController: UIViewController {
     private var spriteKitScene: SKScene!
     
     private var previousFrameTime: TimeInterval?
+    
+    var cabinetNode: ClawMachineCabinetNode!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +82,7 @@ class GameViewController: UIViewController {
         
         scnView.delegate = self
         
-        let cabinetNode = ClawMachineCabinetNode()
+        cabinetNode = ClawMachineCabinetNode()
         scene.rootNode.addChildNode(cabinetNode)
         
         for _ in 0..<50 {
@@ -127,7 +129,7 @@ class GameViewController: UIViewController {
     
     @objc
     func startButtonPressed() {
-        
+        cabinetNode.startButtonPressed()
     }
     
     @objc
