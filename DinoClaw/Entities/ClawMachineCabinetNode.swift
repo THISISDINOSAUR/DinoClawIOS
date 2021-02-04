@@ -91,7 +91,7 @@ class ClawMachineCabinetNode: EntityNode {
         stateMachine.enter(ClawMachineAwaitingForwardInputState.self)
     }
     
-    func forawrdButtonPressed() {
+    func forwardButtonPressed() {
         stateMachine.enter(ClawMachineMovingForwardState.self)
     }
     

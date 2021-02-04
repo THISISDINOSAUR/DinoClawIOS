@@ -14,6 +14,6 @@ class ClawMachineOpeningClawState: ClawMachineState {
     }
     
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        return stateClass is ClawMachineReturningToStartState.Type
+        return stateClass is ClawMachineReadyToStartState.Type
     }
 }

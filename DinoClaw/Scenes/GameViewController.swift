@@ -21,6 +21,9 @@ class GameViewController: UIViewController {
     private var previousFrameTime: TimeInterval?
     
     var cabinetNode: ClawMachineCabinetNode!
+    var startButton: UIButton!
+    var forwardButton: UIButton!
+    var rightButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,35 +38,6 @@ class GameViewController: UIViewController {
         
         // place the camera
         cameraNode.position = SCNVector3(x: 0, y: 5, z: 25)
-        
-        // main "sun" light
-        let lightNode = SCNNode()
-        lightNode.light = SCNLight()
-        lightNode.light!.type = .directional
-        lightNode.light!.castsShadow = true
-        lightNode.light!.intensity = GameplayConfiguration.World.Lights.Directional.intensity
-        lightNode.light!.color = GameplayConfiguration.World.Lights.Directional.color
-        lightNode.position = SCNVector3(x: 0, y: 10, z: 10)
-        lightNode.eulerAngles = GameplayConfiguration.World.Lights.Directional.rotation
-        scene.rootNode.addChildNode(lightNode)
-        
-        // ambient lighting
-        let ambientLightNode = SCNNode()
-        ambientLightNode.light = SCNLight()
-        ambientLightNode.light!.type = .ambient
-        ambientLightNode.light?.intensity = 700
-        ambientLightNode.light!.color = GameplayConfiguration.World.Lights.Ambient.color
-        scene.rootNode.addChildNode(ambientLightNode)
-        
-        let ambientLightNode2 = SCNNode()
-        ambientLightNode2.light = SCNLight()
-        ambientLightNode2.light!.type = .directional
-        ambientLightNode2.light?.intensity = 230
-        ambientLightNode2.eulerAngles = SCNVector3(x: Float(180.degreesToRadians), y: 0, z: 0)
-        ambientLightNode2.light!.color = GameplayConfiguration.World.Lights.Ambient.color
-        scene.rootNode.addChildNode(ambientLightNode2)
-        
-        
         
         scnView.scene = scene
         scnView.allowsCameraControl = true
@@ -105,26 +79,29 @@ class GameViewController: UIViewController {
         let size = view.frame.size
         let color = UIColor(hueDegrees: 334, saturation: 0.43, brightness: 1.0, alpha: 1.0)
         
-        let startButton = UIButton()
+        startButton = UIButton()
         startButton.frame = CGRect(x: size.width - 250, y: size.height - 75, width: 50, height: 50)
         startButton.backgroundColor = color
         startButton.layer.cornerRadius = 25
         scnView.addSubview(startButton)
         startButton.addTarget(self, action: #selector(self.startButtonPressed), for: UIControl.Event.touchDown)
         
-        let forwardButton = UIButton()
+        forwardButton = UIButton()
         forwardButton.frame = CGRect(x: size.width - 150, y: size.height - 75, width: 50, height: 50)
         forwardButton.backgroundColor = color
         forwardButton.layer.cornerRadius = 25
         scnView.addSubview(forwardButton)
         forwardButton.addTarget(self, action: #selector(self.forwardButtonPressed), for: UIControl.Event.touchDown)
+        //tODO needs to nbe any kind of touch up event
+        forwardButton.addTarget(self, action: #selector(self.forwardButtonUnpressed), for: UIControl.Event.touchUpInside)
         
-        let rightButton = UIButton()
+        rightButton = UIButton()
         rightButton.frame = CGRect(x: forwardButton.frame.maxX + 50, y: size.height - 75, width: 50, height: 50)
         rightButton.backgroundColor = color
         rightButton.layer.cornerRadius = 25
         scnView.addSubview(rightButton)
         rightButton.addTarget(self, action: #selector(self.rightButtonPressed), for: UIControl.Event.touchDown)
+        rightButton.addTarget(self, action: #selector(self.rightButtonUnpressed), for: UIControl.Event.touchUpInside)
     }
     
     @objc
@@ -134,11 +111,22 @@ class GameViewController: UIViewController {
     
     @objc
     func forwardButtonPressed() {
-        //TODO this is gonna need to be a hold down situation
+        cabinetNode.forwardButtonPressed()
+    }
+    
+    @objc
+    func forwardButtonUnpressed() {
+        cabinetNode.forwardButtonUnpressed()
     }
     
     @objc
     func rightButtonPressed() {
+        cabinetNode.rightButtonPressed()
+    }
+    
+    @objc
+    func rightButtonUnpressed() {
+        cabinetNode.rightButtonUnpressed()
     }
     
     override var shouldAutorotate: Bool {
@@ -172,6 +160,18 @@ extension GameViewController: SCNSceneRendererDelegate {
             if let entity = node as? EntityNode {
                 entity.update(deltaTime: deltaTime)
             }
+        }
+        
+        startButton.alpha = 0.5
+        forwardButton.alpha = 0.5
+        rightButton.alpha = 0.5
+        let state = cabinetNode.stateMachine.currentState
+        if state is ClawMachineReadyToStartState {
+            startButton.alpha = 1.0
+        } else if state is ClawMachineAwaitingForwardInputState || state is ClawMachineMovingForwardState {
+            forwardButton.alpha = 1.0
+        } else if state is ClawMachineAwaitingRightInputState || state is ClawMachineMovingRightState {
+            rightButton.alpha = 1.0
         }
     }
 }

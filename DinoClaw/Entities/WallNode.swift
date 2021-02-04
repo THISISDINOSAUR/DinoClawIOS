@@ -14,6 +14,8 @@ class WallNode: EntityNode {
         let boxShape = SCNPhysicsShape(geometry: box, options: nil)
         let boxBody = SCNPhysicsBody(type: .static, shape: boxShape)
         physicsBody = boxBody
+        
+        castsShadow = false
     }
     
     required init?(coder: NSCoder) {

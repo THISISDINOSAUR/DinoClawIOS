@@ -14,6 +14,6 @@ class ClawMachineAwaitingForwardInputState: ClawMachineState {
     }
     
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        return stateClass is ClawMachineReadyToStartState.Type
+        return stateClass is ClawMachineMovingForwardState.Type
     }
 }

@@ -14,6 +14,6 @@ class ClawMachineLoweringClawState: ClawMachineState {
     }
     
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        return stateClass is ClawMachineMovingRightState.Type
+        return stateClass is ClawMachineRaisingClawState.Type
     }
 }
